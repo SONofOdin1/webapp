@@ -10,7 +10,7 @@ connectDB();
 
 // app.get command function require and respond and res.send 
 
-app.get('/', (req, res) => res.send('My Server is not working'));
+app.get('/', (req, res) => res.send('My Server is working'));
 
 // Define routes like app.use('web path', require('real path'));
 
