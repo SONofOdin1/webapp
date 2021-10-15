@@ -12,9 +12,17 @@ connectDB();
 
 app.get('/', (req, res) => res.send('My Server is not working'));
 
+// Define routes like app.use('web path', require('real path'));
+
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/auth', require('./routes/api/auth'));
+app.use('/api/posts', require('./routes/api/posts'));
+app.use('/api/profile', require('./routes/api/profile'));
+
 // Create Port with first const port and create process.env.PORT || and port
 
 const PORT = process.env.PORT || 3000;
+
 
 // App.listen (port, use console.log for checking)
 
